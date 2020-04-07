@@ -2914,6 +2914,17 @@ MonoBehaviour:
           m_StringArgument: Fire
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1484703828}
+        m_MethodName: updateSpriteColour
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: red
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &474616578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7045,6 +7056,7 @@ GameObject:
   - component: {fileID: 1484703826}
   - component: {fileID: 1484703825}
   - component: {fileID: 1484703828}
+  - component: {fileID: 1484703831}
   - component: {fileID: 1484703830}
   - component: {fileID: 1484703829}
   m_Layer: 0
@@ -7202,6 +7214,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1484703831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484703824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2035d192f052fa478dffd27324f721a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _r: 255
+  _g: 255
+  _b: 255
+  _a: 255
 --- !u!1 &1490342062
 GameObject:
   m_ObjectHideFlags: 0

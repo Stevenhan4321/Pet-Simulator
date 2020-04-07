@@ -5,6 +5,9 @@ using System;
 public class Slime : MonoBehaviour
 {
 
+
+    SpriteRenderer sprite;
+
     public int _hunger;
     public int _happiness;
     // [SerializedField]
@@ -24,6 +27,7 @@ public class Slime : MonoBehaviour
     void Start()
     {
         // PlayerPrefs.SetString("then", "03/31/2020 19:20:12");
+        sprite = GetComponent<SpriteRenderer>();
         updateStatus();
         if(!PlayerPrefs.HasKey("name")){
             PlayerPrefs.SetString("name", "Slime");
@@ -253,6 +257,30 @@ public class Slime : MonoBehaviour
             updateDevice();
         PlayerPrefs.SetInt("_hunger", _hunger);
         PlayerPrefs.SetInt("_happiness", _happiness);
+    }
+
+    public void updateSpriteColour(string c){
+        
+        Color sColour;
+
+        if(c == "red") {
+            sColour = new Color(255, 0, 0, 255);
+        }
+        else if(c == "blue"){
+            sColour = new Color(0, 0, 255, 255);
+        }
+        else if(c == "green"){
+            sColour = new Color(0, 255, 0, 255);
+        }
+        else if(c == "gray"){
+            sColour = new Color(155, 155, 155, 255);
+        }
+        else {
+            sColour = new Color(255, 255, 255, 255);
+        }
+
+
+        sprite.color = sColour;
     }
 
 
