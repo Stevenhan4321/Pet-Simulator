@@ -21,7 +21,7 @@ public class ColorChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sprite.color = new Color(_r, _g, _b, _a);
+        //sprite.color = new Color(_r, _g, _b, _a);
     }
 
     public void myNewFunctionS(int r, int g, int b, int a){

@@ -180,7 +180,7 @@ public class Slime : MonoBehaviour
     }
 
     public void buyElement(string x){
-        if(coins < 10 || hunger > 100){
+        if(coins < 20 || hunger > 100){
             return;
         }
         if(color == x){
@@ -264,19 +264,19 @@ public class Slime : MonoBehaviour
         Color sColour;
 
         if(c == "red") {
-            sColour = new Color(255, 0, 0, 255);
+            sColour = new Color(1f, 0f, 0f, 1f);
         }
         else if(c == "blue"){
-            sColour = new Color(0, 0, 255, 255);
+            sColour = new Color(0f, 0f, 1f, 1f);
         }
         else if(c == "green"){
-            sColour = new Color(0, 255, 0, 255);
+            sColour = new Color(0f, 1f, 0f, 1f);
         }
-        else if(c == "gray"){
-            sColour = new Color(155, 155, 155, 255);
+        else if(c == "brown"){
+            sColour = new Color(0.2830f, 0.1513f, 0.0547f, 1f);
         }
         else {
-            sColour = new Color(255, 255, 255, 255);
+            sColour = new Color(1f, 1f, 1f, 1f);
         }
 
 
