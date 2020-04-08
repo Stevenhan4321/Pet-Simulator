@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -135,4 +136,11 @@ public class GameManager : MonoBehaviour
            g.SetActive(false);
        }
    }
+
+
+    public void gotoMain() {
+        SceneManager.LoadScene("MainMenu");
+        slime.GetComponent<Slime>().name = "NAME";
+        PlayerPrefs.SetString("name", slime.GetComponent<Slime> ().name);
+    }
 }
