@@ -20,6 +20,8 @@ public class Slime : MonoBehaviour
     public string _name;
     private int _clickCount;
     public int _money;
+    public float _scalex = 2.813846f;
+    public float _scaley = 3.017373f;
 
 
     public bool _serverTime;
@@ -28,6 +30,7 @@ public class Slime : MonoBehaviour
     {
         // PlayerPrefs.SetString("then", "03/31/2020 19:20:12");
         sprite = GetComponent<SpriteRenderer>();
+        sprite.transform.localScale = new Vector3(2.813846f, 3.017373f, 1f);
         updateStatus();
         if(!PlayerPrefs.HasKey("name")){
             PlayerPrefs.SetString("name", "Slime");
@@ -179,17 +182,23 @@ public class Slime : MonoBehaviour
         }
     }
 
+    void scaleUp(){
+        _scalex *= 1.05f;
+        _scaley *= 1.05f;
+        sprite.transform.localScale = new Vector3(_scalex, _scaley, 1f);
+    }
+
     public void buyElement(string x){
         if(coins < 20 || hunger > 100){
             return;
         }
         if(color == x){
-            coins -= 10;
             hunger += Convert.ToInt32(hunger * .10);
         }
         coins -= 20;
         color = x;
         hunger += 1;
+        scaleUp();
     }
 
 
@@ -200,6 +209,7 @@ public class Slime : MonoBehaviour
         coins -= 35;
         hunger += 1;
         morality += 5;
+        scaleUp();
     }
 
     public void buySteak(){
@@ -209,6 +219,7 @@ public class Slime : MonoBehaviour
         coins -= 35;
         hunger += 1;
         morality -= 5;
+        scaleUp();
     }
 
     public void starve(){
