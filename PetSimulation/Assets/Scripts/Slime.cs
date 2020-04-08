@@ -31,6 +31,10 @@ public class Slime : MonoBehaviour
         // PlayerPrefs.SetString("then", "03/31/2020 19:20:12");
         sprite = GetComponent<SpriteRenderer>();
         sprite.transform.localScale = new Vector3(2.813846f, 3.017373f, 1f);
+        PlayerPrefs.SetInt("_hunger", 0);
+        PlayerPrefs.SetInt("_happiness", 0);
+        PlayerPrefs.SetInt("_coins", 50);
+        PlayerPrefs.SetInt("_morality", 50);
         updateStatus();
         if(!PlayerPrefs.HasKey("name")){
             PlayerPrefs.SetString("name", "Slime");
